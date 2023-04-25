@@ -1,15 +1,13 @@
-package com.Infinitystop.Infinity;
+package com.example.Infinityshop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class
-InfinityApplication {
+public class InfinityShopApplication {
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(InfinityApplication.class, args);
+		SpringApplication.run(InfinityShopApplication.class, args);
 	}
 
 }

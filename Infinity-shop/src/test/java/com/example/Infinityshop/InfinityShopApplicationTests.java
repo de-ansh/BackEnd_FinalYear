@@ -1,10 +1,10 @@
-package com.Infinitystop.Infinity;
+package com.example.Infinityshop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class InfinityApplicationTests {
+class InfinityShopApplicationTests {
 
 	@Test
 	void contextLoads() {
