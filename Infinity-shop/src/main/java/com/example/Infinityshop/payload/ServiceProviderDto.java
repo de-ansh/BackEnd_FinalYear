@@ -13,6 +13,6 @@ public class ServiceProviderDto {
     private String email;
     private String phone;
     private String address;
-
+    private String idProofNum;
     private ServiceEntDto service;
 }

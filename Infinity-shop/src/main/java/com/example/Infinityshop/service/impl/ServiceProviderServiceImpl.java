@@ -37,12 +37,22 @@ public class ServiceProviderServiceImpl implements ServiceProviderService {
 
     @Override
     public ServiceProviderDto updateServiceprovider(ServiceProviderDto serviceProviderDto, Integer serviceProviderId) {
-        return null;
+
+        ServiceProvider serviceProvider= this.serviceProviderRepo.findById(serviceProviderId).orElseThrow(()-> new ResourceNotFoundException("ServiceProvider", "serviceProviderId", serviceProviderId));
+        serviceProvider.setEmail(serviceProviderDto.getEmail());
+        serviceProvider.setProviderName(serviceProviderDto.getProviderName());
+        serviceProvider.setAddress(serviceProviderDto.getAddress());
+        serviceProvider.setPhone(serviceProviderDto.getPhone());
+        serviceProvider.setIdProofNum(serviceProviderDto.getIdProofNum());
+        ServiceProvider updated= this.serviceProviderRepo.save(serviceProvider);
+        return this.modelMapper.map(updated,ServiceProviderDto.class);
     }
 
     @Override
     public ServiceProviderDto GetById(Integer serviceProviderId) {
-        return null;
+        ServiceProvider serviceProvider= this.serviceProviderRepo.findById(serviceProviderId).orElseThrow(()-> new ResourceNotFoundException("ServiceProvider ", "ServiceProvider Id", serviceProviderId));
+        return this.modelMapper.map(serviceProvider, ServiceProviderDto.class);
+
     }
 
     @Override
