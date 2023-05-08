@@ -23,7 +23,8 @@ public class ServiceProvider {
     private String phone;
     @Column( nullable = false, length = 100)
     private String address;
-
+    @Column( nullable = false, length = 12)
+    private String idProofNum;
 
 
     @JsonIgnoreProperties(value = "serviceProvider")
