@@ -21,8 +21,8 @@ public class User {
     private  String emailId;
     @Column(name = "User_Password", length = 100, nullable = false)
     private String password;
-    @Column(name = "UserAddres", nullable = false)
+    @Column(name = "UserAddress", nullable = true)
     private String address;
-    @Column(name = "mobile_nu", length = 10, nullable = false)
+    @Column(name = "mobile_nu", length = 10, nullable = true)
     private String mobile_no;
 }
