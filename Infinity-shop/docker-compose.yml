@@ -1,0 +1,30 @@
+version: "3.8"
+name: infinity_shop
+services:
+  postgres:
+    image: postgres:latest
+    container_name: infinity-postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: CHuFYban8sy
+    ports:
+      - "8001:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  shadow_postgres:
+    image: postgres:latest
+    container_name: infinity-postgres-shadow
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: CHuFYban8sy
+    ports:
+      - "8003:5432"
+    volumes:
+      - pg_data_shadow:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
+  pg_data_shadow:

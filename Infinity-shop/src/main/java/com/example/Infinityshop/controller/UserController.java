@@ -44,4 +44,9 @@ public class UserController {
         return ResponseEntity.ok(this.userService.getUserBYiD(userID));
     }
 
+    @GetMapping("/{email}")
+    public  ResponseEntity<UserDto> getUserById(@PathVariable String emailId){
+        return ResponseEntity.ok(this.userService.loadUserByUsername(emailId));
+    }
+
 }
